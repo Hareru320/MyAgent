@@ -54,12 +54,12 @@ docker restart redis-task
 
 ```bash
 docker run -d \
-  --name apix-mysql \
+  --name agt-mysql \
   -p 3307:3306 \
   -e MYSQL_ROOT_PASSWORD=22223333 \
-  -e MYSQL_DATABASE=apix_database \
-  -e MYSQL_USER=apix \
-  -e MYSQL_PASSWORD=apixapix \
+  -e MYSQL_DATABASE=agt_database \
+  -e MYSQL_USER=agt \
+  -e MYSQL_PASSWORD=agtagt \
   --restart unless-stopped \
   mysql:8.0
 ```

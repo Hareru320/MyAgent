@@ -1,4 +1,4 @@
-# Start all APIX backend services locally (non-Docker mode).
+# Start all AGT backend services locally (non-Docker mode).
 # Run this after setup.ps1 has installed dependencies and started Redis/MySQL.
 
 $ROOT = Get-Location
@@ -10,10 +10,10 @@ $services = @(
     @{ Name = "FILE";  Path = "FILE/file_service";       Port = 5094 }
 )
 
-Write-Host "Starting APIX backend services locally..."
+Write-Host "Starting AGT backend services locally..."
 
 foreach ($svc in $services) {
-    $jobName = "apix-$($svc.Name.ToLower())"
+    $jobName = "agt-$($svc.Name.ToLower())"
     Push-Location "$ROOT\$($svc.Path)"
     Write-Host "[$($svc.Name)] Starting uvicorn on port $($svc.Port)..."
     Start-Process -NoNewWindow -FilePath "uv" -ArgumentList "run", "main.py" -WorkingDirectory (Get-Location)

@@ -1,8 +1,8 @@
 # 克隆项目到本地
 
 ```bash
-mkdir APIX
-cd APIX
+mkdir AGT
+cd AGT
 git clone https://github.com/Hareru320/MyAgent.git
 cd MyAgent
 ```
@@ -125,13 +125,13 @@ docker pull mysql:8.0
 cd ./MEMORY/memory_module/data
 
 docker run -d \
-  --name apix-mysql \
+  --name agt-mysql \
   -p 3307:3306 \
   -v ./mysql_data:/var/lib/mysql \
   -e MYSQL_ROOT_PASSWORD=your_root_password \
-  -e MYSQL_DATABASE=apix_database \
-  -e MYSQL_USER=apix \
-  -e MYSQL_PASSWORD=apixapix \
+  -e MYSQL_DATABASE=agt_database \
+  -e MYSQL_USER=agt \
+  -e MYSQL_PASSWORD=agtagt \
   --restart unless-stopped \
   mysql:8.0
 ```
@@ -143,8 +143,8 @@ docker run -d \
 查看[init_mysql.sql](./script/init_mysql.sql)
 
 ```bash
-docker exec -i apix-mysql \
-  mysql -u root -pyour_root_password apix_database < ./README/script/init_mysql.sql
+docker exec -i agt-mysql \
+  mysql -u root -pyour_root_password agt_database < ./README/script/init_mysql.sql
 ```
 
 4. [可选] Milvus知识库配置
@@ -244,7 +244,7 @@ curl https://get.volta.sh | bash
 本项目使用 Node.js 22.19.0
 
 ```bash
-cd ./CLIENT/apix-app
+cd ./CLIENT/agt-app
 volta install node@22.19.0
 ```
 
@@ -253,7 +253,7 @@ volta install node@22.19.0
 ### 安装依赖
 
 ```bash
-cd ./CLIENT/apix-app
+cd ./CLIENT/agt-app
 npm install
 ```
 
@@ -262,7 +262,7 @@ npm install
 ### 启动开发环境
 
 ```bash
-cd ./CLIENT/apix-app
+cd ./CLIENT/agt-app
 npm run dev
 ```
 
@@ -271,7 +271,7 @@ npm run dev
 ### 打包应用（可选）
 
 ```bash
-cd ./CLIENT/apix-app
+cd ./CLIENT/agt-app
 
 # macOS
 npm run build:mac
@@ -291,7 +291,7 @@ npm run build:linux
 * 如安装依赖失败，可尝试：
 
 ```bash
-cd ./CLIENT/apix-app
+cd ./CLIENT/agt-app
 rm -rf node_modules package-lock.json
 npm install
 ```

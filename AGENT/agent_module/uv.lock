@@ -209,7 +209,7 @@ wheels = [
 ]
 
 [[package]]
-name = "apix-agent"
+name = "agt-agent"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

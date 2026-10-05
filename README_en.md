@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="./README/source/APIX-bar.jpeg" width="300" height="200" style="border-radius: 12px; display: block; margin: 0 auto;">
+<img src="./README/source/AGT-bar.jpeg" width="300" height="200" style="border-radius: 12px; display: block; margin: 0 auto;">
 
-# APIX — Open-Source AI Agent Operating System
+# AGT — Open-Source AI Agent Operating System
 
 English | [中文文档](./README.md)
 
@@ -19,9 +19,9 @@ English | [中文文档](./README.md)
 
 ---
 
-## 🎯 What is APIX?
+## 🎯 What is AGT?
 
-APIX is a **full-stack AI Agent collaboration platform** designed to provide a complete runtime environment for intelligent agents.
+AGT is a **full-stack AI Agent collaboration platform** designed to provide a complete runtime environment for intelligent agents.
 
 It supports:
 
@@ -32,7 +32,7 @@ It supports:
 * MCP integration
 * Persistent memory management
 
-Whether you're writing code, generating presentations, preparing reports, or building automated workflows, APIX helps transform AI from a conversation tool into a real productivity system.
+Whether you're writing code, generating presentations, preparing reports, or building automated workflows, AGT helps transform AI from a conversation tool into a real productivity system.
 
 ---
 
@@ -180,11 +180,11 @@ If you'd like to customize the deployment process, please refer to our documenta
 - Fix incorrect context construction after message node editing.
 - Add event loop and event listener mechanism to invoke event handlers non-blockingly by priority.
 - Implement automatic tasks and scheduled tasks based on the event loop.
-- !!! The next-generation APIX is currently in the works (underlying refactoring).
+- !!! The next-generation AGT is currently in the works (underlying refactoring).
 
 ---
 
-## About APIX 3.0
+## About AGT 3.0
 
 - Refactoring the underlying Agent Loop
 - Cleaner project directory structure
@@ -210,6 +210,6 @@ This project is licensed under the **GNU GPL v3.0 License**.
 
 ---
 
-🌟 If you find APIX useful, consider giving the project a Star!
+🌟 If you find AGT useful, consider giving the project a Star!
 
 > All modules have been tested using ApiFox.

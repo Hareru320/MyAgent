@@ -5,18 +5,18 @@ from fastapi import FastAPI, APIRouter
 import uvicorn
 from fastapi.responses import JSONResponse
 
-import apix_agent.routers as routers_pkg
-from apix_agent.commons.auto_init import auto_init
-from apix_agent.apix_event_handler.event_handler_manager import event_handler_mgr
-from apix_agent.apix_event_pipe.common_event.common_event_gateway import pipe_event_handler
-from apix_agent.commons.logger import Logger
+import agt_agent.routers as routers_pkg
+from agt_agent.commons.auto_init import auto_init
+from agt_agent.agt_event_handler.event_handler_manager import event_handler_mgr
+from agt_agent.agt_event_pipe.common_event.common_event_gateway import pipe_event_handler
+from agt_agent.commons.logger import Logger
 
 
 def auto_load_router(app: FastAPI):
     pkg_path = routers_pkg.__path__
 
     for _, module_name, _ in pkgutil.iter_modules(pkg_path):
-        full_name = f"apix_agent.routers.{module_name}"
+        full_name = f"agt_agent.routers.{module_name}"
         print(f"[auto_load_router] Load module: {full_name}")
 
         module = importlib.import_module(full_name)
@@ -47,7 +47,7 @@ async def lifespan(app: FastAPI):
 
 
 def create_app() -> FastAPI:
-    app = FastAPI(title="APIX AGENT", version="1.0.0", lifespan=lifespan)
+    app = FastAPI(title="AGT AGENT", version="1.0.0", lifespan=lifespan)
     return app
 
 

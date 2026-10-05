@@ -1,4 +1,4 @@
-# Global configuration settings for the Apix Agent Core module.
+# Global configuration settings for the Agt Agent Core module.
 import platform
 
 OPERATION_SYSTEM = platform.system().lower()

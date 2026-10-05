@@ -11,9 +11,9 @@ WORKER_COUNT = 4 # Number of worker tasks in DataServerManager, to process query
 
 MYSQL_DOCKER_BASE_URL = os.environ.get("MYSQL_DOCKER_BASE_URL", "localhost")
 MYSQL_DOCKER_PORT = int(os.environ.get("MYSQL_DOCKER_PORT", "3307"))
-MYSQL_USER = "apix"
-MYSQL_PASSWORD = "apixapix"
-MYSQL_DATABASE = "apix_database"
+MYSQL_USER = "agt"
+MYSQL_PASSWORD = "agtagt"
+MYSQL_DATABASE = "agt_database"
 MYSQL_CHARSET = "utf8mb4"
 AUTO_COMMIT = True
 

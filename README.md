@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="./README/source/APIX-bar.jpeg"  width="300" height="200" style="border-radius: 12px; display: block; margin: 0 auto;">
+<img src="./README/source/AGT-bar.jpeg"  width="300" height="200" style="border-radius: 12px; display: block; margin: 0 auto;">
 
-# APIX — 开源 AI Agent 协作平台
+# AGT — 开源 AI Agent 协作平台
 
 中文文档 | [English](./README_en.md)
 
@@ -19,7 +19,7 @@
 
 ---
 
-## APIX 3.0 正在开发中！
+## AGT 3.0 正在开发中！
 
 - 将重构底层 Agent Loop；
 - 更清晰的项目目录结构；
@@ -29,13 +29,13 @@
 - 更小的项目依赖；
 - 将支持一键pip安装；
 
-[前往 >APIX 3.0](https://github.com/Hareru320/MyAgent)
+[前往 >AGT 3.0](https://github.com/Hareru320/MyAgent)
 
 ---
 
 ## 🎯 这是什么？
 
-APIX 是一个**全栈的 AI Agent 协作平台**。它是一套完整的 Agent 运行时——支持多智能体并行协作、安全代码执行、知识库检索。
+AGT 是一个**全栈的 AI Agent 协作平台**。它是一套完整的 Agent 运行时——支持多智能体并行协作、安全代码执行、知识库检索。
 
 它可以帮你完成包括但不限于代码编写、PPT生成、汇报整理以及各种自动化操作。
 
@@ -174,7 +174,7 @@ chmod +x start-local.sh
 - 线形任务流编辑相关代码已损坏，将在后续版本中修复 (低优先级)
 - 新增定时任务系统（支持设置时间与周期或设置Linux Cron表达式）
 - 修复部分情况下页面无法收到后台推送的事件的问题
-- !!! 下一代APIX正在筹备中 (底层重构)
+- !!! 下一代AGT正在筹备中 (底层重构)
 
 ---
 

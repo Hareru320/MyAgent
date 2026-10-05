@@ -1,5 +1,5 @@
 [project]
-name = "apix_agent"
+name = "agt_agent"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"

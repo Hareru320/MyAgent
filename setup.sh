@@ -2,7 +2,7 @@
 
 set -e  # exit on error
 
-echo "==== APIX One-click Setup (Linux/macOS) ===="
+echo "==== AGT One-click Setup (Linux/macOS) ===="
 
 ROOT=$(pwd)
 
@@ -79,19 +79,19 @@ Ensure_Dir "$ROOT/MEMORY/memory_module/data/mysql_data"
 
 docker pull mysql:8.0
 
-Docker_Run_Safe "apix-mysql" \
-docker run -d --name apix-mysql -p 3307:3306 \
+Docker_Run_Safe "agt-mysql" \
+docker run -d --name agt-mysql -p 3307:3306 \
 -v "$ROOT/MEMORY/memory_module/data/mysql_data:/var/lib/mysql" \
 -e MYSQL_ROOT_PASSWORD=your_root_password \
--e MYSQL_DATABASE=apix_database \
--e MYSQL_USER=apix \
--e MYSQL_PASSWORD=apixapix \
+-e MYSQL_DATABASE=agt_database \
+-e MYSQL_USER=agt \
+-e MYSQL_PASSWORD=agtagt \
 --restart unless-stopped mysql:8.0
 
 echo "Waiting for MySQL..."
 
 for i in {1..20}; do
-    if docker exec apix-mysql mysqladmin ping -h "127.0.0.1" -uroot -pyour_root_password >/dev/null 2>&1; then
+    if docker exec agt-mysql mysqladmin ping -h "127.0.0.1" -uroot -pyour_root_password >/dev/null 2>&1; then
         echo "MySQL is ready"
         break
     fi
@@ -101,7 +101,7 @@ done
 echo "[4/7] Initializing database..."
 
 cat "$ROOT/README/script/init_mysql_backup.sql" | \
-docker exec -i apix-mysql mysql -u root -pyour_root_password apix_database
+docker exec -i agt-mysql mysql -u root -pyour_root_password agt_database
 
 # =========================
 # Backend
@@ -129,7 +129,7 @@ done
 # =========================
 echo "[6/7] Init frontend..."
 
-pushd "$ROOT/CLIENT/apix-app" >/dev/null
+pushd "$ROOT/CLIENT/agt-app" >/dev/null
 
 # Install Volta if not exists
 if ! command -v volta >/dev/null 2>&1; then

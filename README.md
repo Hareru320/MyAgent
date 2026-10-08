@@ -1,11 +1,3 @@
-<div align="center">
-
-<img src="./README/source/AGT-bar.jpeg"  width="300" height="200" style="border-radius: 12px; display: block; margin: 0 auto;">
-
-
-
-</div>
-
 ---
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">

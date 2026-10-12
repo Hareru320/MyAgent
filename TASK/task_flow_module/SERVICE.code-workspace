@@ -1,8 +1,14 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"name": "TASK",
+			"path": ".",
+			"settings": {
+				"python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+				"python.analysis.extraPaths": [
+					"${workspaceFolder}"
+				]
+			}
 		}
-	],
-	"settings": {}
+	]
 }

@@ -1,3 +1,6 @@
+import sys
+print(sys.path)
+
 from abc import ABC, abstractmethod
 import asyncio
 import copy

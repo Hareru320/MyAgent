@@ -1,0 +1,70 @@
+{
+	"folders": [
+		{
+			// 仓库根目录：文档、docker-compose、启动脚本等
+			// 这里只把 AGENT 模块加入分析路径，因为 FILE 与 MEMORY 都各自定义了
+			// 顶层的 core / routers 包，同时加进来会导致跳转解析到错误的那一份。
+			"name": "AGT (root)",
+			"path": ".",
+			"settings": {
+				"python.defaultInterpreterPath": "${workspaceFolder}/AGENT/agent_module/.venv/Scripts/python.exe",
+				"python.analysis.extraPaths": [
+					"${workspaceFolder}/AGENT/agent_module"
+				]
+			}
+		},
+		{
+			"name": "AGENT",
+			"path": "AGENT/agent_module",
+			"settings": {
+				"python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+				"python.analysis.extraPaths": [
+					"${workspaceFolder}"
+				]
+			}
+		},
+		{
+			"name": "FILE",
+			"path": "FILE/file_service",
+			"settings": {
+				"python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+				"python.analysis.extraPaths": [
+					"${workspaceFolder}"
+				]
+			}
+		},
+		{
+			"name": "MEMORY",
+			"path": "MEMORY/memory_module",
+			"settings": {
+				"python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+				"python.analysis.extraPaths": [
+					"${workspaceFolder}"
+				]
+			}
+		},
+		{
+			"name": "TASK",
+			"path": "TASK/task_flow_module",
+			"settings": {
+				"python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+				"python.analysis.extraPaths": [
+					"${workspaceFolder}"
+				]
+			}
+		},
+		{
+			"name": "CLIENT",
+			"path": "CLIENT/agt-app"
+		}
+	],
+	"settings": {
+		"python.terminal.activateEnvironment": true
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-python.python",
+			"ms-python.vscode-pylance"
+		]
+	}
+}

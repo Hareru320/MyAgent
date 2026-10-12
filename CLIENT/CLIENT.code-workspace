@@ -1,8 +1,8 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"name": "CLIENT",
+			"path": "./agt-app"
 		}
-	],
-	"settings": {}
+	]
 }

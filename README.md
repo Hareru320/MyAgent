@@ -1,4 +1,20 @@
 <div>
+---
+
+##  界面速览
+
+<table border="0" cellpadding="6" cellspacing="6" style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td align="center" width="50%"><b>聊天界面展示</b><br><img src="./README/source/main-page.png"  style="border-radius: 6px;"></td>
+    <td align="center" width="50%"><b>编辑器页面演示</b><br><img src="./README/source/editor-page.png"  style="border-radius: 6px;"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>资源管理页展示</b><br><img src="./README/source/src-page.png"  style="border-radius: 6px;"></td>
+    <td align="center"><b>设置页展示</b><br><img src="./README/source/setting-page.png"  style="border-radius: 6px;"></td>
+  </tr>
+</table>
+
+---
 <div>
 
 ---

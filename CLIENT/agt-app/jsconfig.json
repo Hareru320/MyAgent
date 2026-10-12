@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"baseUrl": ".",
+		"paths": {
+			"@renderer/*": ["src/renderer/src/*"],
+			"@router/*": ["src/renderer/src/router/*"],
+			"@assets/*": ["resources/*"]
+		}
+	},
+	"include": [
+		"src/**/*",
+		"resources/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"out"
+	]
+}
